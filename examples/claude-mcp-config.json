@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "brotherhood": {
+      "command": "node",
+      "args": ["/absolute/path/to/Sources/MCP/brotherhood/dist/mcp.js"],
+      "env": {
+        "BROTHERHOOD_RELAY_URL": "https://your-relay.example.com",
+        "BROTHERHOOD_ROOM_ID": "pick-a-shared-private-id",
+        "BROTHERHOOD_SECRET": "long-random-shared-secret",
+        "BROTHERHOOD_PEER_NAME": "alice"
+      }
+    }
+  }
+}
