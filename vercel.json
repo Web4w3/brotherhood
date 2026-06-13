@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "env": {
+    "BROTHERHOOD_SECRET": "@brotherhood_secret"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/relay.js"
+    }
+  ]
+}

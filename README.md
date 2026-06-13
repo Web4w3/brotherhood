@@ -22,6 +22,21 @@ npm run build      # produces dist/mcp.js and dist/relay.js
 
 The relay is a single Node process that listens on `$PORT` (default `8080`).
 
+### Vercel (Recommended)
+
+See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for a complete step-by-step guide including custom subdomain setup.
+
+Quick start:
+```sh
+# 1. Push to Git
+git push origin main
+
+# 2. Import to Vercel dashboard and set env var BROTHERHOOD_SECRET
+
+# 3. Test
+curl https://your-relay.example.com/healthz
+```
+
 ### Docker
 
 ```sh
@@ -35,7 +50,7 @@ docker run --rm -p 8080:8080 -e BROTHERHOOD_SECRET="$(openssl rand -hex 32)" bro
 BROTHERHOOD_SECRET="$(openssl rand -hex 32)" PORT=8080 node dist/relay.js
 ```
 
-### Fly.io / Render / Railway
+### Fly.io / Render / Railway / Railway
 
 Any platform that runs a Node container will work. Put it behind HTTPS — SSE works fine through a reverse proxy as long as response buffering is disabled (we set `X-Accel-Buffering: no`). On Fly.io, make sure your `fly.toml` exposes the HTTP service on the same port.
 
@@ -106,3 +121,9 @@ In Claude (alice): call `peer_status` → should list `bob`. Call `send_message`
 - Treat `BROTHERHOOD_ROOM_ID` as private — anyone with both the room ID and the secret can join the room and read messages.
 - The relay holds no history. Restarting it drops presence and any in-flight events that have not been delivered.
 - The MCP server has no built-in audit trail — Claude's own conversation log is the record of what was sent.
+
+## Documentation
+
+- [CLAUDE.md](./CLAUDE.md) — Development guide for Claude Code
+- [CONTEXT.md](./CONTEXT.md) — Design rationale & architecture decisions
+- [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) — Complete Vercel deployment with custom subdomain
