@@ -2,4 +2,6 @@ node_modules/
 dist/
 *.js.map
 .env
+!.env.local
+!.env.example
 .vscode/
