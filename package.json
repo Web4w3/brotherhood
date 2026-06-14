@@ -4,7 +4,7 @@
   "description": "MCP bridge between two Claude Code sessions on different computers, via a shared cloud relay (HTTP POST + SSE).",
   "scripts": {
     "build:mcp": "esbuild src/mcp.ts --bundle --platform=node --outfile=dist/mcp.js --format=cjs",
-    "build:relay": "esbuild api/index.ts --bundle --platform=node --outfile=dist/index.js --format=cjs",
+    "build:relay": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --format=cjs",
     "build": "npm run build:mcp && npm run build:relay",
     "start:mcp": "node dist/mcp.js",
     "start:relay": "node dist/index.js",
