@@ -10,7 +10,7 @@ import {
   parseBearer,
   secretsEqual,
   sseEncode,
-} from "./protocol";
+} from "../src/protocol";
 
 const PORT = Number(process.env.PORT ?? 8080);
 const SECRET = process.env.BROTHERHOOD_SECRET ?? "";
