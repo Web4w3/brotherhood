@@ -1,10 +1,4 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:relay",
-  "public": false,
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 300
-    }
-  }
+  "buildCommand": "npm run build:relay"
 }
