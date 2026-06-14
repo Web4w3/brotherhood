@@ -1,14 +1,13 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "buildCommand": "npm run build:relay",
+  "public": false,
   "env": {
     "BROTHERHOOD_SECRET": "@brotherhood_secret"
   },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/relay.js"
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 300
     }
-  ]
+  }
 }

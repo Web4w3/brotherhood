@@ -171,6 +171,12 @@ app.post("/rooms/:roomId/send", (req: Request, res: Response) => {
   res.json({ delivered });
 });
 
-app.listen(PORT, () => {
-  console.log(`brotherhood relay listening on :${PORT}`);
-});
+// Export app for both local and serverless environments
+export default app;
+
+// Only listen locally (not in Vercel serverless)
+if (process.env.VERCEL !== "1") {
+  app.listen(PORT, () => {
+    console.log(`brotherhood relay listening on :${PORT}`);
+  });
+}
