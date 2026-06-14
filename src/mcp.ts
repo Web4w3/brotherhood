@@ -1,4 +1,8 @@
+import dotenv from "dotenv";
+import path from "path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+
+dotenv.config({ path: path.join(process.cwd(), ".env.local") });
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import os from "os";
 import { z } from "zod/v3";

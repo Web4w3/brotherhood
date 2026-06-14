@@ -1,4 +1,8 @@
+import dotenv from "dotenv";
+import path from "path";
 import express, { Request, Response } from "express";
+
+dotenv.config({ path: path.join(process.cwd(), ".env.local") });
 import {
   Envelope,
   EnvelopeSchema,
