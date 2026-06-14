@@ -2,9 +2,6 @@
   "version": 2,
   "buildCommand": "npm run build:relay",
   "public": false,
-  "env": {
-    "BROTHERHOOD_SECRET": "@brotherhood_secret"
-  },
   "functions": {
     "api/**/*.js": {
       "maxDuration": 300
