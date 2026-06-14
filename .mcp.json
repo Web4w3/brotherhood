@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "vercel": {
+      "command": "node",
+      "args": [
+        "./node_modules/vercel-mcp/dist/index.js"
+      ]
+    }
+  }
+}
