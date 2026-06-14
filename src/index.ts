@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import path from "path";
 import express, { Request, Response } from "express";
 
-dotenv.config({ path: path.join(process.cwd(), ".env.local") });
+// dotenv.config({ path: path.join(process.cwd(), ".env.local") });
 import {
   Envelope,
   EnvelopeSchema,
@@ -10,7 +10,7 @@ import {
   parseBearer,
   secretsEqual,
   sseEncode,
-} from "../src/protocol";
+} from "./protocol";
 
 const PORT = Number(process.env.PORT ?? 8080);
 const SECRET = process.env.BROTHERHOOD_SECRET ?? "";
