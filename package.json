@@ -2,7 +2,6 @@
   "name": "brotherhood",
   "version": "1.0.0",
   "description": "MCP bridge between two Claude Code sessions on different computers, via a shared cloud relay (HTTP POST + SSE).",
-  "main": "dist/index.js",
   "scripts": {
     "build:mcp": "esbuild src/mcp.ts --bundle --platform=node --outfile=dist/mcp.js --format=cjs",
     "build:relay": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --format=cjs",
