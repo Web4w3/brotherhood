@@ -71,7 +71,7 @@ function peerList(roomId: string, exceptId?: number): string[] {
 const app = express();
 app.use(express.json({ limit: MAX_BODY }));
 
-app.get("/healthz", (_req, res) => {
+app.get("/health", (_req, res) => {
   res.json({ ok: true, rooms: rooms.size });
 });
 

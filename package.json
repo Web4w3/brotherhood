@@ -5,7 +5,7 @@
   "main": "dist/mcp.js",
   "scripts": {
     "build:mcp": "esbuild src/mcp.ts --bundle --platform=node --outfile=dist/mcp.js --format=cjs",
-    "build:relay": "esbuild src/relay.ts --bundle --platform=node --outfile=dist/relay.js --format=cjs",
+    "build:relay": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --format=cjs",
     "build": "npm run build:mcp && npm run build:relay",
     "start:mcp": "node dist/mcp.js",
     "start:relay": "node dist/relay.js",
