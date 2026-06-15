@@ -1,5 +1,15 @@
 {
   "mcpServers": {
+    "brotherhood": {
+      "command": "node",
+      "args": ["~/Sources/brotherhood/dist/mcp.js"],
+      "env": {
+        "BROTHERHOOD_RELAY_URL": "https://brotherhood-web4w3.vercel.app",
+        "BROTHERHOOD_ROOM_ID": "0",
+        "BROTHERHOOD_SECRET": "01fa6b07f23f61dfb79fd907da7d81777259558f44c1a03db2a170f3f49086ca",
+        "BROTHERHOOD_PEER_NAME": "andrey"
+      }
+    },
     "vercel": {
       "command": "node",
       "args": [
