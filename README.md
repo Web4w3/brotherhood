@@ -10,7 +10,15 @@ Claude (Mac A) ──stdio──► brotherhood MCP ──POST/SSE──► rela
 
 A pair of sessions is paired by a shared `BROTHERHOOD_ROOM_ID` and `BROTHERHOOD_SECRET`. The relay does not persist anything — it is in-memory pub/sub with presence.
 
-## Build
+## Quick install (recommended)
+
+```sh
+npx -y @web4w3/install brotherhood
+```
+
+No cloning or build step needed. The package is pre-compiled and available on npm as [`@web4w3/install`](https://www.npmjs.com/package/@web4w3/install).
+
+## Build from source
 
 ```sh
 npm install
@@ -64,8 +72,8 @@ In each Claude Code config (e.g. `~/.claude.json` or your project's `.mcp.json`)
 {
   "mcpServers": {
     "brotherhood": {
-      "command": "node",
-      "args": ["/absolute/path/to/Sources/MCP/brotherhood/dist/mcp.js"],
+      "command": "npx",
+      "args": ["-y", "@web4w3/install", "brotherhood"],
       "env": {
         "BROTHERHOOD_RELAY_URL": "https://your-relay.example.com",
         "BROTHERHOOD_ROOM_ID": "pick-a-shared-private-id",
